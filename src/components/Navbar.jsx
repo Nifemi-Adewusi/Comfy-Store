@@ -2,6 +2,7 @@ import { BsCart3, BsMoonFill, BsSunFill } from "react-icons/bs";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import NavLinks from "./NavLinks";
+import SearchInput from "./SearchInput";
 
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../features/user/userSlice";
@@ -16,7 +17,7 @@ const Navbar = () => {
   const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart);
 
   return (
-    <nav className="bg-base-200">
+    <nav className="bg-base-200 sticky top-0 z-30 w-full shadow-md transition-all duration-300">
       <div className="navbar align-element">
         <div className="navbar-start">
           {/* TITLE */}
@@ -45,6 +46,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
+          {/* SEARCH */}
+          <div className="mr-4">
+            <SearchInput />
+          </div>
           {/* THEME SETUP */}
           <label className="swap swap-rotate">
             <input type="checkbox" onChange={handleTheme} />
