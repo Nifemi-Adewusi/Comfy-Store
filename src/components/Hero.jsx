@@ -1,37 +1,48 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import Typewriter from "./Typewriter";
 
-import hero1 from '../assets/hero1.webp';
-import hero2 from '../assets/hero2.webp';
-import hero3 from '../assets/hero3.webp';
-import hero4 from '../assets/hero4.webp';
+import hero1 from "../assets/hero1.webp";
+import hero2 from "../assets/hero2.webp";
+import hero3 from "../assets/hero3.webp";
+import hero4 from "../assets/hero4.webp";
 
 const carouselImages = [hero1, hero2, hero3, hero4];
 
 const Hero = () => {
   return (
-    <div className='grid lg:grid-cols-2 gap-24 items-center'>
+    <div className="grid lg:grid-cols-2 gap-24 items-center">
       <div>
-        <h1 className='max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl'>
-          We are changing the way people shop
+        <h1 className="max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl">
+          Experience{" "}
+          <span className="text-primary">
+            <Typewriter
+              text={["Comfort", "Style", "Quality"]}
+              delay={2000}
+              infinite
+              typeSpeed={300}
+              deleteSpeed={150}
+            />
+          </span>
+          <br /> Redefined.
         </h1>
-        <p className='mt-8 max-w-xl text-lg leading-8'>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-          repellat explicabo enim soluta temporibus asperiores aut obcaecati
-          perferendis porro nobis.
+        <p className="mt-8 max-w-xl text-lg leading-8">
+          Discover a curated collection of premium furniture and decor that
+          transforms your house into a home. Elevate your living space with
+          Comfy.
         </p>
-        <div className='mt-10'>
-          <Link to='/products' className='btn btn-primary'>
-            Our Products
+        <div className="mt-10">
+          <Link to="/products" className="btn btn-primary">
+            Shop Now
           </Link>
         </div>
       </div>
-      <div className='hidden h-[28rem] lg:carousel carousel-center p-4 space-x-4 bg-neutral rounded-box '>
+      <div className="hidden h-[28rem] lg:carousel carousel-center p-4 space-x-4 bg-neutral rounded-box ">
         {carouselImages.map((image) => {
           return (
-            <div key={image} className='carousel-item'>
+            <div key={image} className="carousel-item">
               <img
                 src={image}
-                className='rounded-box h-full w-80 object-cover'
+                className="rounded-box h-full w-80 object-cover"
               />
             </div>
           );
