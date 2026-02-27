@@ -11,7 +11,7 @@ import {
   Login,
   Orders,
   Products,
-  Register,
+  // Register,
   Register,
   SingleProduct,
   Wishlist,
