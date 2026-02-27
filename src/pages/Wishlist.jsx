@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
-import { SectionTitle, ProductsGrid } from "../components";
+import { SectionTitle } from "../components";
+
 import { Link } from "react-router-dom";
+import ProductsGrid from "../components/ProductsGrid";
 
 const Wishlist = () => {
   const { wishlistItems } = useSelector((state) => state.wishlistState);
