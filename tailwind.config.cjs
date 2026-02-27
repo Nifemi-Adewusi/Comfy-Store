@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         roboto: "Roboto",
+        lato: "Lato",
       },
     },
   },
