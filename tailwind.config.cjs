@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         roboto: "Roboto",
         lato: "Lato",
+        ibm: "Ibm Plex Mono",
       },
     },
   },
